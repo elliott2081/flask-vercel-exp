@@ -1,7 +1,7 @@
 import os
 from flask import Flask, render_template
 
-app = Flask(__name__, template_folder='api/templates')
+app = Flask(__name__, template_folder=os.path.abspath('templates'))
 
 @app.route('/')
 def home():
