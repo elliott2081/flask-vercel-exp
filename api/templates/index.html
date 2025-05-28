@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hi, I'm Dave</title>
+    
+    <!-- Import modern CSS library - Pico CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+    
+    <style>
+        :root {
+            --pico-background-color: #1a1a1a;
+            --pico-color: #e0e0e0;
+            --pico-primary: #7c3aed;
+            --pico-primary-background: #7c3aed;
+            --pico-primary-hover: #6d28d9;
+            --pico-card-background-color: #242424;
+            --pico-card-border-color: #333333;
+            --pico-muted-color: #999999;
+            --pico-border-radius: 4px;
+        }
+        
+        body {
+            background-color: var(--pico-background-color);
+            color: var(--pico-color);
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .container {
+            max-width: 800px;
+            text-align: center;
+            padding: 2rem;
+        }
+        
+        h1 {
+            font-size: 3rem;
+            font-weight: 300;
+            margin-bottom: 2rem;
+            letter-spacing: -1px;
+        }
+        
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-top: 3rem;
+        }
+        
+        .card {
+            background: var(--pico-card-background-color);
+            padding: 1.5rem;
+            border-radius: var(--pico-border-radius);
+            border: 1px solid var(--pico-card-border-color);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        
+        .card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(124, 58, 237, 0.15);
+        }
+        
+        .card h3 {
+            margin: 0 0 0.5rem 0;
+            font-size: 1.2rem;
+            color: var(--pico-primary);
+        }
+        
+        .card p {
+            margin: 0;
+            color: var(--pico-muted-color);
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+        
+        .emoji {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+        
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .cards {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Hi, I'm Dave</h1>
+        
+        <div class="cards">
+            <div class="card">
+                <span class="emoji">🚀</span>
+                <h3>Fast & Modern</h3>
+                <p>Built with Flask and deployed on Vercel for lightning-fast performance</p>
+            </div>
+            
+            <div class="card">
+                <span class="emoji">🎨</span>
+                <h3>Clean Design</h3>
+                <p>Minimalist aesthetic with a focus on readability and user experience</p>
+            </div>
+            
+            <div class="card">
+                <span class="emoji">💡</span>
+                <h3>Simple & Effective</h3>
+                <p>Sometimes less is more. This is just the beginning.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
